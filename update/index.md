@@ -3,9 +3,4 @@ layout: layouts/home.njk
 title: World
 templateClass: tmpl-post
 ---
-Working on Kon computer designs
-
-Expecting deliveries to 32 Birdwood Road, Maidenhead, Berkshire, SL6 5AP
-
-I have all I need other that access to my assets and a berring yacht docked at Southamtpon to leave the commonwealth and start my new life in either sweden/norway/iceland - if they'll have me. Will want new passport, license to carry and other gifts to build a new future for 2025+
-
+Healing from a viscious RCMP attack on my innocently where they stole an O-Light torch and some Jaray Pro headphones. Leaving me at the Peace Arch Hospital bloody and made sure I didn't receive care for 7 hours. Not even cleaning my blood. A ranger checked on me in the back of the police car to say to the police officers "this is not haloween" and ran off.
