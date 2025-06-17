@@ -9,4 +9,4 @@ it didn't break me though. I'm healing at my parents house in maidenhead. With a
 
 As on Instagram.com/kalv
 Own the ipod shuffle, r4, planck honeywell, electrosmith looper all in aid of mental health for future children and brain science. As Apple devices talked voices to people, tools to all secure the mind and the future. Completed a message from what I believe was Father Earth to fix 'Apple' and the words 'Taylor Swift' - can explain all in a debrief to the real one. But she never messaged back and came to give me a bottle of water.
-P20707312 o light waiting for scorpio / minolta
+P20707312 o light waiting 11:29 17-06-25
