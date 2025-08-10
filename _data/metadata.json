@@ -1,0 +1,20 @@
+{
+  "title": "K△LV",
+  "url": "https://kalv.online/",
+  "language": "en",
+  "description": "Kalv's space on the internet ",
+  "feed": {
+    "subtitle": "Kalv's space on the internet.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://kalv.online/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://kalv.online/feed/feed.json"
+  },
+  "author": {
+    "name": "Kalvir Sandhu",
+    "url": "https://kalv.online/"
+  }
+}

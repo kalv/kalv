@@ -1,0 +1,21 @@
+---
+title: March Music 2025
+description: Selection of music I've been loving to highlight this month
+date: 2025-03-08
+layout: layouts/post.njk
+tags: ["musictv"]
+---
+
+As I've been cleaning up my music collection for my new found love, the hiby r4 mp3 player I decided to listen to some albums back to back and wanted to highlight a couple for the month of March.
+
+First up is Tate McRae, So close to what. It's an album that is obviously created, produced and sang by a dancer. All the tracks will want to make you dance. The lyrics on all the tracks are on point and are for the people of 2025. It's Ok I'm ok is a track that I'm embarrassed to say I love, in that it always wakes up my soul and lifts it up with energy to take on the day or whatever the next task is for me to do. The sound sample that starts Sports Car reminds me of some kind of class Bollywood song.
+
+An old album I hadn't really listened to end to end. Is Drake, Scorpion. Litening to it today I can associate to all the tracks. As they've been played a lot and are all great, from God's plan to Summer Games. I've always disliked Drake because I thought his lyrics was too monotonic but really all the tracks have been produced with some great studio melodies and instruments. Vocals from others like Emotionless that lead into some inspring lyrics that are hip hop of today.
+
+Continuing with hip hop, leads me to Kendrick Lamar, GNX. The first 5-10 seconds of the first track, wacced out murals having some spanish and big sounds that are full in all of the sound spectrum with his voice being so present and front forward. This is one of those albums that you'd lisen to if you need to take on the world. Literally. Kendrick raps in a speed with rhyme and poetic truths that hit hard to anyone listening to it. Luther starting with a spanish guitar but then opening up with lyrics that you'd just want to take a girl and swing her around the dance floor.
+
+Taylor Swift, Folklore. Even though it was made in 2020, it's an album that I'd wish she'd make again with the same collaborators. Cardigan, cause of the starting drum sample that almost sounds like they are tapping their hands on instruments on a desk or table.  Exhile, will either makeyou cry or lift you up with joy, Bon Iver's range of vocals hitting his deep lows and high highes (not sure how else to describe it), then the bird tweeting in the background, at about 2:00mins you'll want to start singing with them both, "So Many Times". The 1, that has the off tone chords that play so well. Her voice stands out on all of the tracks, well recorded in a good studio, it's obvious. This style of music suits her, or I guess it's the music that I prefer than the pop tracks that she's been making lately. Invisible string, is literally a country folk classic that I'm sure that no one listens to.
+
+Coldplay, Moon Music. I've not been a fan of their albums after parachutes really but I do remember seeing them at glastonbury with just a globe on their stage for their props and they love music. It's as though they've returned to a bit of their roots in that the tracks are unique again rather than sounding like their previous album popular tracks on the radio. The main tracks that stand out is Feels Like I'm Falling in Love, mainly because of the synth backing track. We Pray that has Little Simz (LITTLE SIMZ! I'm a big fan on her track one life, might live on Drop 6 EP). Rainbow creates an ambience that is lovely on some great headphones, for me it's just still the Apple in ear headphones (3.5mm jack on macbook air m2), when the drums kick in, you'll just want to spin around and around.
+
+I didn't link to the artists above, because there isn't a clear service where you can buy the album to own like CD and ensure the royalities go directly to the artist, but this artist I'll link to. Listen to all of his YouTube uploads, this man is a man. [Marc Rebillet](https://www.youtube.com/@MarcRebillet) to me is known as an artist that plays on the streets to the people around him. Always pointing out the kids, the babies that are around him, encouraging all people to love people. He is the loop daddy, the loop king really, makes music out of anything. I can't highlight any specific tracks, any of his New York performances on the street are great, even the ones where he is shut down by the police, LOL.

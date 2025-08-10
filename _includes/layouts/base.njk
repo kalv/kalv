@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <script src="/js/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <h1>
+          &#x299A;
+          &#x2A00;
+          &#x2E16;
+          &#x2212;
+        </h1>
+      </a>
+      <small>I am a maker of music and me</small>
+
+    </header>
+
+    <p>
+      // <a href="/">Home</a>
+      {%- for entry in collections.all | eleventyNavigation %}
+        // <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+      {%- endfor %}
+    </p>
+
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <hr>
+      <a href="https://github.com/kalv">Github</a>
+      /
+      <a href="https://instagram.com/kalv">Instagram</a>
+      <br>
+      <small>&copy; 2025 Kalvir Sandhu. All rights reserved.</small>
+      <hr>
+    </footer>
+    <script>
+      console.log("The day is August 5th 2025, no one wants to come to my door and employ me at either Apple, Google, BBC, ARM, UBC, Cambridge, Gov.uk, RoyalEnfield, Cadbury, Argos, Currys, Oxford Uni, ECS Southampton, Shopify, Nvidia, United Nations, Nato, US embassy, Facebook, Twitter, Sony, Olympus, Nikon, Teenage Engineering, Roland, Waitrose, Sainsburys, Tesco, Iceland, M&S, at 10:47am GMT, No olivia evans arrival");
+    </script>
+
+  </body>
+</html>
