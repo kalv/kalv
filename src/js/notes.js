@@ -3,7 +3,7 @@ class Notes {
     this.textarea = document.getElementById('noteTextarea');
     this.dbName = 'kalvNotesDB';
     this.storeName = 'savedText';
-    this.request = indexedDB.open(this.dbName, 2);
+    this.request = indexedDB.open(this.dbName, 1);
 		this.db = null;
 
     this.request.onerror = function(event) {
@@ -39,6 +39,7 @@ class Notes {
         }
       }
     }.bind(this));
+
     const clearDb = document.getElementById("clearNotes");
     clearDb.addEventListener("click", function(e) {
       e.preventDefault();
@@ -77,6 +78,7 @@ class Notes {
 	loadSavedText() {
 	  if (!this.db) return;
 		const previousNotes = document.getElementById('previousNotes');
+
 	  const transaction = this.db.transaction([this.storeName], 'readonly');
 	  const objectStore = transaction.objectStore(this.storeName);
 	  const getAllRequest = objectStore.getAll(); // Get all stored items
@@ -86,7 +88,7 @@ class Notes {
 	    if (results && results.length > 0) {
 				const notes = results.map(item => {
 					const div = document.createElement('div');
-					div.textContent = item.text;
+          div.textContent = item.text + " :: " + new Date(item.timestamp);
 					return div;
 				});
 

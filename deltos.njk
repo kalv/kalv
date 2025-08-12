@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Deltos
+  order: 1
+---
+<div id="deltos">
+
+<!-- <h3>
+  ⦶ 8::18::6 ⧋ 56.36
+</h3> -->
+
+<h2>Deltos</h2>
+
+<p>
+  <ul>
+    <li>Hello, this is Deltos, a one page operating system for work.</li>
+    <li>You can focus on your work postively to innovate and create.</li>
+    <li>Go diving with a unique sound sequence, upload a window image to focus your mind.</li>
+    <li>Then type away. All Private. Download a disk to back it up.</li>
+  </ul>
+</p>
+
+<div id="window">
+  window
+  <div id="imageWindow">
+    drop image here
+  </div>
+</div>
+
+<div id="mind-bubbles">
+  <p>
+
+    <button id="playPauseButton">
+      Go Diving
+    </button>
+  </p>
+  <div id="bubblesMessage"></div>
+</div>
+
+<div id="notes">
+  <p>
+    <textarea id="noteTextarea">write private notes and save them here</textarea>
+
+    <div id="previousNotes">
+    </div>
+
+    <button class="tiny-link" id="clearNotes">Clear your notes</button>
+  </p>
+
+</div>
+
+<div id="disk">
+  <div>
+<hr>
+    Save Disk <button id="backupBtn">Save</button>
+<br>
+
+    <label for="uploadFile">Load disk</label>
+    <input type="file" id="uploadFile" accept=".json" class="input-file">
+    <button id="restoreBtn">Load</button>
+  </div>
+
+  <div id="messageBox" class="message-box hidden"></div>
+</div>
+
+</div>

@@ -3,6 +3,10 @@ import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import JustShare from './just-share.js'
 import Notes from './notes.js'
+import Bubbles from './bubbles.js'
+import DroppableImageTarget from './DroppableImageTarget.js'
+import IndexedDBBackupRestore from './IndexedDBBackupRestore.js'
+
 
 let scene = undefined;
 
@@ -579,63 +583,93 @@ class Clock {
   }
 }
 
-/* Built by Kalv */
+const DB_NAMES = ['kalvNotesDB', 'windowImage'];
+
+function showMessage(message, type = 'info') {
+  const messageBox = document.getElementById('messageBox');
+  messageBox.textContent = message;
+}
+
+
+/* Built by Kalvir Sandhu */
 document.addEventListener("DOMContentLoaded", () => {
-	const canvas = document.getElementById("drawing-app");
-	if (canvas !== null) {
-		new DrawingApp(canvas);
-	}
-
-  const box = document.getElementById("t2v");
-  if (box !== null) {
-    new T2V();
-  }
-  
-  const readPost = document.getElementById("read-post");
-  if (readPost !== null) {
-    new ReadPost();
-  }
-
-  const clock = document.getElementById("clock");
-  if (clock !== null) {
-    new Clock(clock);
-  }
-
-  const nort = document.getElementById("nort");
+	const nort = document.getElementById("nort");
   if (nort !== null) {
     const app = new ObjLoaderApp('nort', '/models/bedroom.obj');
   }
 
-  const vlog = document.getElementById("vlog");
-  if (vlog !== null) {
-    console.log("starting up vlog");
-    // --- Load ---
-    //window.addEventListener('load', loadFFmpeg); 
-    preview = document.getElementById('preview');
-    startButton = document.getElementById('startButton');
-    stopButton = document.getElementById('stopButton');
-    status = document.getElementById('status');
-    downloadLink = document.getElementById('downloadLink');
 
-    loadFFmpeg();
+	const deltos = document.getElementById("deltos");
+	if (deltos !== null) {
+		console.log("Loading Deltos");
 
-    startButton.addEventListener('click', startRecording);
-    stopButton.addEventListener('click', stopRecording);
-  }
-  const justShare = document.getElementById("just-share");
-  if (justShare !== null) {
-    new JustShare();
-  }
+		const notes = document.getElementById("notes");
+		if (notes !== null) {
+			new Notes();
+		}
 
-  const visualizer = document.getElementById("visualizer");
-  if (visualizer !== null) {
-    const myLoop = new ThreeJsLoop('visualizer');
+		new Bubbles('playPauseButton', 'bubblesMessage', 'playIcon', 'pauseIcon');
 
-  }
+  	new DroppableImageTarget('imageWindow');
 
-  const notes = document.getElementById("notes");
-  if (notes !== null) {
-    new Notes();
-  }
+  	const backupRestore = new IndexedDBBackupRestore(DB_NAMES);
+  	document.getElementById('backupBtn').addEventListener('click', async () => {
+  	  try {
+  	    showMessage('Saving backup disk...', 'info');
+  	    const json = await backupRestore.backup();
+  	    const blob = new Blob([json], { type: 'application/json' });
+  	    const url = URL.createObjectURL(blob);
+  	    const a = document.createElement('a');
+  	    a.href = url;
+  	    a.download = 'kalvdotcouk-disk-1.json';
+  	    document.body.appendChild(a);
+  	    a.click();
+  	    document.body.removeChild(a);
+  	    URL.revokeObjectURL(url);
+  	    showMessage('Disk downloaded successfully!', 'success');
+  	  } catch (error) {
+  	    console.error('Disk save failed:', error);
+  	    showMessage(`Disk save failed: ${error.message}.`, 'error');
+  	  } finally {
+  	    backupRestore.closeConnections();
+  	  }
+  	});
+
+  	// Event listener for the "Upload & Restore" button
+  	document.getElementById('restoreBtn').addEventListener('click', async () => {
+  	  const fileInput = document.getElementById('uploadFile');
+  	  const file = fileInput.files[0];
+
+  	  if (!file) {
+  	    showMessage('Please select a kalv disk to upload.', 'error');
+  	    return;
+  	  }
+
+  	  showMessage('Loading disk...', 'info');
+  	  const reader = new FileReader();
+  	  reader.onload = async (e) => {
+  	    const jsonString = e.target.result;
+  	    try {
+  	      await backupRestore.restore(jsonString);
+  	      showMessage('Loaded!', 'success');
+  	    } catch (error) {
+  	      console.error('Loading failed:', error);
+  	      showMessage(`Loading failed: ${error.message}.`, 'error');
+  	    } finally {
+  	      backupRestore.closeConnections();
+  	    }
+  	  };
+  	  reader.onerror = (error) => {
+  	    console.error('File reading error:', error);
+  	    showMessage('Error reading file. Check console for errors.', 'error');
+  	  };
+  	  reader.readAsText(file);
+  	});
+
+  	// Important: Close connections when the page is unloaded to prevent pending requests
+  	window.addEventListener('beforeunload', () => {
+  	  backupRestore.closeConnections();
+  	});
+	} // end deltos
 
 });
