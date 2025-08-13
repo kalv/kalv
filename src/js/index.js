@@ -598,6 +598,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const app = new ObjLoaderApp('nort', '/models/bedroom.obj');
   }
 
+	const readPost = document.getElementById("read-post");
+	if (readPost !== null) {
+		new ReadPost();
+	}
 
 	const deltos = document.getElementById("deltos");
 	if (deltos !== null) {
