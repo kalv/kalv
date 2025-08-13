@@ -64,11 +64,11 @@ Inspired by Puerto Escondido
 ## River Sounds
 Have fun playing this in the background against the tracks above to make you feel you're listening to them out in the nature.
 
-<audio controls preload="none">
+<audio controls loop preload="none">
 <source src="/music/river-sounds.mp3" type="audio/mp3">
 </audio>
 <br>
 
-<audio controls preload="none">
+<audio controls loop preload="none">
 <source src="/music/river.mp3" type="audio/mp3">
 </audio>
