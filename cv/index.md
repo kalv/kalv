@@ -179,5 +179,9 @@ Designing new software [Nort](/nort) for better capturing of natural landscapes 
 
 Feb 2018 - VanRuby - [Deploying ActionCable](https://www.youtube.com/watch?v=v2uaY9qTSsI) - Implementing realtime web in Rails 5.0
 Hack the Entreprenuer - [Breaking out of your comfort Zone](https://hacktheentrepreneur.com/podcast/kalvir-sandhu/) - podcast episode discussing forming businesses
+
+## Verification
+To verify my identity and the work I have performed in my life when you meet me, ask to see my 2 torches. Olight i3E EIS J10221326 & I3T 2 EOS P2070312.
+
 </div>
 </div>
