@@ -75,6 +75,17 @@ class Notes {
     };
   }
 
+  shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      // Pick a random index from the unshuffled part of the array
+      const j = Math.floor(Math.random() * (i + 1));
+
+      // Swap the elements at indexes i and j
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
 	loadSavedText() {
 	  if (!this.db) return;
 		const previousNotes = document.getElementById('previousNotes');
@@ -83,10 +94,13 @@ class Notes {
 	  const objectStore = transaction.objectStore(this.storeName);
 	  const getAllRequest = objectStore.getAll(); // Get all stored items
 	
-	  getAllRequest.onsuccess = function(event) {
+    getAllRequest.onsuccess = (event) => {
 	    const results = event.target.result;
 	    if (results && results.length > 0) {
-				const notes = results.map(item => {
+
+        const shuffledNotes = [...results].sort(() => Math.random() - 0.5);
+
+				const notes = shuffledNotes.map(item => {
 					const div = document.createElement('div');
           div.textContent = item.text + " :: " + new Date(item.timestamp);
 					return div;
