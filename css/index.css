@@ -56,6 +56,22 @@ w}
   ul, li {
     font-size: 0.9em;
   }
+  #dotCanvas {
+    float:right;
+    width: 200px;
+  }
+  #window {
+    margin: 10px;
+    float:right;
+    font-family: courier;
+    text-align:center;
+    font-size: 0.8em;
+    #imageWindow {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #ccc;
+    }
+}
 }
 
 #notes {
@@ -77,15 +93,4 @@ w}
   }
 }
 
-#window {
-  margin: 10px;
-  float:right;
-  font-family: courier;
-  text-align:center;
-  font-size: 0.8em;
-  #imageWindow {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-  }
-}
+

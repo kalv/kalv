@@ -6,6 +6,7 @@ import Notes from './notes.js'
 import Bubbles from './bubbles.js'
 import DroppableImageTarget from './DroppableImageTarget.js'
 import IndexedDBBackupRestore from './IndexedDBBackupRestore.js'
+import DotCanvas from './DotCanvas.js'
 
 
 let scene = undefined;
@@ -606,6 +607,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	const deltos = document.getElementById("deltos");
 	if (deltos !== null) {
 		console.log("Loading Deltos");
+
+		const canvasElement = document.getElementById('dotCanvas');
+		const dotCanvasApp = new DotCanvas(canvasElement);
+		dotCanvasApp.init()
 
 		const notes = document.getElementById("notes");
 		if (notes !== null) {
