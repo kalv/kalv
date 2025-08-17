@@ -7,7 +7,6 @@ import Bubbles from './bubbles.js'
 import DroppableImageTarget from './DroppableImageTarget.js'
 import IndexedDBBackupRestore from './IndexedDBBackupRestore.js'
 import DotCanvas from './DotCanvas.js'
-import SunAzimuthCalculator from './SunAzimuthCalculator.js'
 
 let scene = undefined;
 
@@ -607,10 +606,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const deltos = document.getElementById("deltos");
 	if (deltos !== null) {
 		console.log("Loading Deltos");
-
-		new SunAzimuthCalculator(
-			'azimuth-display'
-		);
 
 		const canvasElement = document.getElementById('dotCanvas');
 		const dotCanvasApp = new DotCanvas(canvasElement);
