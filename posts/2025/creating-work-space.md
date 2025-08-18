@@ -1,7 +1,7 @@
 ---
 title: Creating a safe mind space
 description: Creating a safe mind space to work on complex problems of the world.
-date: 2025-01-31
+date: 2025-08-21
 layout: layouts/post.njk
 tags: ["theories"]
 ---
@@ -13,8 +13,6 @@ In the past a number of methods have worked such as:
 - The right setup in the office, chair, monitor, objects in the room
 - Time management
 
-Today I use these following methods that you can use anytime.
+Today I use Deltos. Which is found with the link above, use your eyes to find it.
 
-Create new clock of some kind, similiar to a sand clock on the desk, you can make it anything you want. Just has to be something that ticks or shows an indication of progress of time. The other day I cut a bottle of coke into two, placed the top back inside of it and put water in it. Made a hole in the cap and filled with a bit of tissue to slow the water down. Such that it drips, so it's a water clock. I've done others, and have my own clock on my mac to help with this.
-
-Music resonation in materials around you and the work. Can be simply a [Roland S-1](https://www.roland.com/global/products/s-1/) playing a sequence of notes and sounds through a headphone jack plugged into a plant. The plant acts as a natural speaker of sorts and creates for me a peaceful area. I've experimented further with other techniques like this. My theory here is that the sound signals and the plant acts as an amplifier of what earth would provide to your mind and body.
+Music resonation that is random and unique, helps calm the mind. The dots and lines helps create a unique visualization that removes the distractions in the brain. Having your notes un-ordered in time, makes you use your eyes and brain to think about what you've written and why. Focussing on a visualization of a photo themes your mind with a window, like the original idea of wallpaper pictures for computers such as Apple and Microsoft.
