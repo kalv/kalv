@@ -1,7 +1,7 @@
 ---
 title: Quote for 2025
 description: My quote that has led me through life.
-date: 2025-05-19
+date: 2025-08-19
 layout: layouts/post.njk
 tags: ["theories"]
 ---
