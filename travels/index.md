@@ -1,11 +1,13 @@
 ---
-layout: layouts/base.njk
+layout: layouts/post.njk
 title: Travels
 templateClass: tmpl-post
 eleventyNavigation:
   key: Travels
   order: 2
 ---
+
+![/img/posts/me.avif](/img/posts/me.avif)
 
 # My Travels
 I've throughly enjoyed backpacking around the world with friends and family. Here are my highlights.
