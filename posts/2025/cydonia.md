@@ -1,9 +1,9 @@
 ---
 title: Human face on Mars
 description: Human face on Mars
-date: 2025-02-04
+date: 2025-08-24
 layout: layouts/post.njk
-tags: ["computers"]
+tags: ["theories"]
 ---
 
 Perhaps plot lines for future science fiction movies, but these circles on Cydonia fascinately create triangles, and from my knowledge on Geology are too perfect to be a natural formation. This observation can help us better understand the importance of learning by seeing and wanting to work with others that see what is being questioned.
