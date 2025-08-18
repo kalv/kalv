@@ -5,7 +5,7 @@ date: 2025-08-18
 layout: layouts/post.njk
 ---
 
-When we ran Brewhouse, we formed our values like a family, a closely knit team of curated individuals from around the world to build what I believe to the best software we could for Canadian companies. These were our values.
+When we ran Brewhouse, we formed our values like a family, a closely knit team of curated individuals from around the world to build what I believe to be the best software we could for Canadian companies. These were our values.
 
 Powered by distinction & collaboration.
 
