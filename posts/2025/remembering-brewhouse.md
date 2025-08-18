@@ -7,6 +7,8 @@ layout: layouts/post.njk
 
 When we ran Brewhouse, we formed our values like a family, a closely knit team of curated individuals from around the world to build what I believe to be the best software we could for Canadian companies. These were our values.
 
+![brewhouse-team-whistler-nov.jpg](/img/posts/2025/brewhouse-team-whistler-nov.jpg)
+
 Powered by distinction & collaboration.
 
 Here are the values our team practice internally and with clients daily. There are always more but these are the ones we focus on the most.
