@@ -183,8 +183,5 @@ Hack the Entreprenuer - [Breaking out of your comfort Zone](https://hacktheentre
 ## Published papers
 [3G - 3W, What? Where? When?](https://www.researchgate.net/publication/2552307_3G_-_3W_What_Where_When)
 
-## Verification
-To verify my identity and the work I have performed in my life when you meet me, ask to see my 2 torches. Olight i3E EIS J10221326 & I3T 2 EOS P2070312.
-
 </div>
 </div>
