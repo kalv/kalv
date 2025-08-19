@@ -1,20 +1,20 @@
 {
-  "title": "K△LV",
-  "url": "https://kalv.online/",
+  "title": "⦚ ⦶ ⧋ −",
+  "url": "https://kalv.co.uk/",
   "language": "en",
-  "description": "Kalv's space on the internet ",
+  "description": "Kalvir Sandhu on the internet ",
   "feed": {
-    "subtitle": "Kalv's space on the internet.",
+    "subtitle": "Kalvir Sandhu on the internet.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://kalv.online/"
+    "id": "https://kalv.co.uk/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://kalv.online/feed/feed.json"
+    "url": "https://kalv.co.uk/feed/feed.json"
   },
   "author": {
     "name": "Kalvir Sandhu",
-    "url": "https://kalv.online/"
+    "url": "https://kalv.co.uk/"
   }
 }
