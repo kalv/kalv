@@ -1,7 +1,7 @@
 ---
 title: Northern Lights
 description: Northern Lights
-date: 2025-08-23
+date: 2025-08-19
 layout: layouts/post.njk
 tags: ["travel"]
 ---

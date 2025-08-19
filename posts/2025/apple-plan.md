@@ -1,7 +1,7 @@
 ---
 title: Apple Company Plan
 description: Review of Apple and it's technology
-date: 2025-08-20
+date: 2025-08-19
 layout: layouts/post.njk
 tags: ["computers"]
 ---

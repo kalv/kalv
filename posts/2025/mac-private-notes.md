@@ -1,7 +1,7 @@
 ---
 title: Mac private notes
 description: Using GoCryptFS to store private notes
-date: 2025-08-22
+date: 2025-08-19
 layout: layouts/post.njk
 tags: ["computers"]
 ---

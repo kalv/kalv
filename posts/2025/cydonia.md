@@ -1,7 +1,7 @@
 ---
 title: Human face on Mars
 description: Human face on Mars
-date: 2025-08-24
+date: 2025-08-19
 layout: layouts/post.njk
 tags: ["theories"]
 ---

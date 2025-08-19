@@ -1,7 +1,7 @@
 ---
 title: Creating a safe mind space
 description: Creating a safe mind space to work on complex problems of the world.
-date: 2025-08-21
+date: 2025-08-19
 layout: layouts/post.njk
 tags: ["theories"]
 ---

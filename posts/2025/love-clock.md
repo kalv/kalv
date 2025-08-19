@@ -1,7 +1,7 @@
 ---
 title: Love clock
 description: what is a love clock
-date: 2025-08-26
+date: 2025-08-19
 layout: layouts/post.njk
 tags: ["theories"]
 ---
