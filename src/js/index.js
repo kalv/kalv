@@ -7,6 +7,7 @@ import Bubbles from './bubbles.js'
 import DroppableImageTarget from './DroppableImageTarget.js'
 import IndexedDBBackupRestore from './IndexedDBBackupRestore.js'
 import DotCanvas from './DotCanvas.js'
+import RotatingDate from './RotatingDate.js'
 
 let scene = undefined;
 
@@ -619,6 +620,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		new Bubbles('playPauseButton', 'bubblesMessage', 'playIcon', 'pauseIcon');
 
   	new DroppableImageTarget('imageWindow');
+
+		const myDateRotator = new RotatingDate(new Date());
+		myDateRotator.startRotation();
 
   	const backupRestore = new IndexedDBBackupRestore(DB_NAMES);
   	document.getElementById('backupBtn').addEventListener('click', async () => {
