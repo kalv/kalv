@@ -596,19 +596,20 @@ function showMessage(message, type = 'info') {
 document.addEventListener("DOMContentLoaded", () => {
 
 	// load the site
-	fetch('https://kalv-public-api.vercel.app')
+	fetch('https://kalv-public-api.vercel.app/ping')
 		.then(response => {
-			console.log(response);
+			// check if white-box
 			if (!response.ok) {
 				throw new Error('Network response was not ok');
 			}
 			return response.json();
 		})
 		.then(data => {
-			console.log('Public access confirmed:', data.status);
-			document.getElementById("black-box").style.display = "block";
+			console.log('Access:', data.response);
+			document.getElementById('black-box').style.display = "block";
 		})
 		.catch(error => {
+			document.getElementById('dot-to-dot').style.display = "block";
 			console.error('There has been a problem with public access:', error);
 			// You can add logic here to send an alert or log this failure.
 		});
