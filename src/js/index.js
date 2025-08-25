@@ -591,6 +591,100 @@ function showMessage(message, type = 'info') {
   messageBox.textContent = message;
 }
 
+class InitKalv {
+	constructor() {
+		const nort = document.getElementById("nort");
+		if (nort !== null) {
+			const app = new ObjLoaderApp('nort', '/models/bedroom.obj');
+		}
+
+		const readPost = document.getElementById("read-post");
+		if (readPost !== null) {
+			new ReadPost();
+		}
+
+		const deltos = document.getElementById("deltos");
+		if (deltos !== null) {
+			console.log("Loading Deltos");
+
+			const canvasElement = document.getElementById('dotCanvas');
+			const dotCanvasApp = new DotCanvas(canvasElement);
+			dotCanvasApp.init()
+
+			const notes = document.getElementById("notes");
+			if (notes !== null) {
+				new Notes();
+			}
+
+			new Bubbles('playPauseButton', 'bubblesMessage', 'playIcon', 'pauseIcon');
+
+			new DroppableImageTarget('imageWindow');
+
+			const myDateRotator = new RotatingDate(new Date());
+			myDateRotator.startRotation();
+
+			const backupRestore = new IndexedDBBackupRestore(DB_NAMES);
+			document.getElementById('backupBtn').addEventListener('click', async () => {
+				try {
+					showMessage('Saving backup disk...', 'info');
+					const json = await backupRestore.backup();
+					const blob = new Blob([json], { type: 'application/json' });
+					const url = URL.createObjectURL(blob);
+					const a = document.createElement('a');
+					a.href = url;
+					a.download = 'kalvdotcouk-disk-1.json';
+					document.body.appendChild(a);
+					a.click();
+					document.body.removeChild(a);
+					URL.revokeObjectURL(url);
+					showMessage('Disk downloaded successfully!', 'success');
+				} catch (error) {
+					console.error('Disk save failed:', error);
+					showMessage(`Disk save failed: ${error.message}.`, 'error');
+				} finally {
+					backupRestore.closeConnections();
+				}
+			});
+
+			// Event listener for the "Upload & Restore" button
+			document.getElementById('restoreBtn').addEventListener('click', async () => {
+				const fileInput = document.getElementById('uploadFile');
+				const file = fileInput.files[0];
+
+				if (!file) {
+					showMessage('Please select a kalv disk to upload.', 'error');
+					return;
+				}
+
+				showMessage('Loading disk...', 'info');
+				const reader = new FileReader();
+				reader.onload = async (e) => {
+					const jsonString = e.target.result;
+					try {
+						await backupRestore.restore(jsonString);
+						showMessage('Loaded!', 'success');
+					} catch (error) {
+						console.error('Loading failed:', error);
+						showMessage(`Loading failed: ${error.message}.`, 'error');
+					} finally {
+						backupRestore.closeConnections();
+					}
+				};
+				reader.onerror = (error) => {
+					console.error('File reading error:', error);
+					showMessage('Error reading file. Check console for errors.', 'error');
+				};
+				reader.readAsText(file);
+			});
+
+			// Important: Close connections when the page is unloaded to prevent pending requests
+			window.addEventListener('beforeunload', () => {
+				backupRestore.closeConnections();
+			});
+		}
+	}
+}
+
 
 /* Built by Kalvir Sandhu */
 document.addEventListener("DOMContentLoaded", () => {
@@ -607,6 +701,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		.then(data => {
 			console.log('Access:', data.response);
 			document.getElementById('black-box').style.display = "block";
+			new InitKalv();
 		})
 		.catch(error => {
 			document.getElementById('dot-to-dot').style.display = "block";
@@ -614,94 +709,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			// You can add logic here to send an alert or log this failure.
 		});
 
-	const nort = document.getElementById("nort");
-  if (nort !== null) {
-    const app = new ObjLoaderApp('nort', '/models/bedroom.obj');
-  }
-
-	const readPost = document.getElementById("read-post");
-	if (readPost !== null) {
-		new ReadPost();
-	}
-
-	const deltos = document.getElementById("deltos");
-	if (deltos !== null) {
-		console.log("Loading Deltos");
-
-		const canvasElement = document.getElementById('dotCanvas');
-		const dotCanvasApp = new DotCanvas(canvasElement);
-		dotCanvasApp.init()
-
-		const notes = document.getElementById("notes");
-		if (notes !== null) {
-			new Notes();
-		}
-
-		new Bubbles('playPauseButton', 'bubblesMessage', 'playIcon', 'pauseIcon');
-
-  	new DroppableImageTarget('imageWindow');
-
-		const myDateRotator = new RotatingDate(new Date());
-		myDateRotator.startRotation();
-
-  	const backupRestore = new IndexedDBBackupRestore(DB_NAMES);
-  	document.getElementById('backupBtn').addEventListener('click', async () => {
-  	  try {
-  	    showMessage('Saving backup disk...', 'info');
-  	    const json = await backupRestore.backup();
-  	    const blob = new Blob([json], { type: 'application/json' });
-  	    const url = URL.createObjectURL(blob);
-  	    const a = document.createElement('a');
-  	    a.href = url;
-  	    a.download = 'kalvdotcouk-disk-1.json';
-  	    document.body.appendChild(a);
-  	    a.click();
-  	    document.body.removeChild(a);
-  	    URL.revokeObjectURL(url);
-  	    showMessage('Disk downloaded successfully!', 'success');
-  	  } catch (error) {
-  	    console.error('Disk save failed:', error);
-  	    showMessage(`Disk save failed: ${error.message}.`, 'error');
-  	  } finally {
-  	    backupRestore.closeConnections();
-  	  }
-  	});
-
-  	// Event listener for the "Upload & Restore" button
-  	document.getElementById('restoreBtn').addEventListener('click', async () => {
-  	  const fileInput = document.getElementById('uploadFile');
-  	  const file = fileInput.files[0];
-
-  	  if (!file) {
-  	    showMessage('Please select a kalv disk to upload.', 'error');
-  	    return;
-  	  }
-
-  	  showMessage('Loading disk...', 'info');
-  	  const reader = new FileReader();
-  	  reader.onload = async (e) => {
-  	    const jsonString = e.target.result;
-  	    try {
-  	      await backupRestore.restore(jsonString);
-  	      showMessage('Loaded!', 'success');
-  	    } catch (error) {
-  	      console.error('Loading failed:', error);
-  	      showMessage(`Loading failed: ${error.message}.`, 'error');
-  	    } finally {
-  	      backupRestore.closeConnections();
-  	    }
-  	  };
-  	  reader.onerror = (error) => {
-  	    console.error('File reading error:', error);
-  	    showMessage('Error reading file. Check console for errors.', 'error');
-  	  };
-  	  reader.readAsText(file);
-  	});
-
-  	// Important: Close connections when the page is unloaded to prevent pending requests
-  	window.addEventListener('beforeunload', () => {
-  	  backupRestore.closeConnections();
-  	});
-	} // end deltos
+	 // end deltos
 
 });
