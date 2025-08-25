@@ -16,4 +16,4 @@ It also calculates the moon azimuth to better syncronize and protect your body t
 
 What is interesting with the moon clock cycle is that, my Grandmother told my mother a story that she shared with me. That when their fields were too hot, they would use the light of the moon to work at night. Allowing them to sow their seeds at night when it was cool. This makes me wonder about how the sounds of the light would affect the seeds to harvest a stronger crop. 
 
-Time of writing ⧋ 34.14 ⦶ 211.44
+Time of writing | 34.14 ⧋  211.44
