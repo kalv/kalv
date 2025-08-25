@@ -1,13 +1,19 @@
 ---
-title: Love clock
+title: Mind clock
 description: what is a love clock
 date: 2025-08-19
 layout: layouts/post.njk
 tags: ["theories"]
 ---
 
-I started to wonder about a clock that is unique to a family and returned to concepts such as the water clock from 300BC that invented the 24 hour clock hand that I wear daily. What was the original, the sun dial.
+I started to wonder about a clock that is unique to help the mind focus on work, not let in trauma, anxiety and distractions. So I returned to concepts such as the water clock from 300BC that invented the 24 hour clock hand that I wear daily as a GMT watch. But what was the original, the sun dial?
 
-The sun dial has an original concept of being unique to a person a set location. One could be built for the apple watch. This means that anyone wanting to meet between the two of them in secret would use a unique time and need to be in the same location for it to sync up. I look forward to developing this out in the future. Two people could say, let's meet together for dinner at "113.68" being the sun azimuth and it only being that time at a set location as the acurrate GPS of today's tech gives the time exactly for a location. If an individual is driving home from work they could see the time change as their location worked towards the exact Lat/Lng. Fantastic.
+The sun dial has an original concept of being unique to a person a set location. So I built built one for the apple watch.
 
-It can also include the moon position. My Grandmother told my mother a story that she shared with me this morning. That when their fields were so hot, they would use the light of the moon to work at night. Allowing them to sow their seeds at night when it was cool. This makes me wonder about how the sounds of the light would affect the seeds to harvest a stronger crop. An observation I made when travelling in Mexico viewing the Sun Temple.
+This means that I now have a personal sun dial that is unique to me and my location. It allows me to see a time that my brain only understands and secures the mind with the sun. Using Lat/Lng and a unique measure to better understand the position of your thinking in the day and night.
+
+It also calculates the moon azimuth to better syncronize and protect your body to heal against slow stiff injuries.
+
+What is interesting with the moon clock cycle is that, my Grandmother told my mother a story that she shared with me. That when their fields were too hot, they would use the light of the moon to work at night. Allowing them to sow their seeds at night when it was cool. This makes me wonder about how the sounds of the light would affect the seeds to harvest a stronger crop. 
+
+Time of writing ⧋ 34.14 ⦶ 211.44
