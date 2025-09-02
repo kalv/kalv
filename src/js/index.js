@@ -593,6 +593,7 @@ function showMessage(message, type = 'info') {
 
 class InitKalv {
 	constructor() {
+		console.log("I can see help come via the explore feed on Instagram from Eve, should i pick a yacht and a house and put into my Apple notes? I would like to still work for Apple when this Copy Kalv Game is over and have a date with am.e.lie or Claire Aitken or Robyn Larsen. If i see a yacht appear on my explore feed at 12:15pm or a house picture I will do so and they will be new selections based on what is for sale, the house will be in NZ though as I believe that to be a safe country from those that did the crimes against me. I am still residing at 32 Birdwood Road, Maidenhead, Berkshire, SL6 5AP waiting for a renault 5 that was supposed to be organized from Olivia Evans, livv.evans on Instagram.");
 		const nort = document.getElementById("nort");
 		if (nort !== null) {
 			const app = new ObjLoaderApp('nort', '/models/bedroom.obj');
