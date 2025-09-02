@@ -593,7 +593,7 @@ function showMessage(message, type = 'info') {
 
 class InitKalv {
 	constructor() {
-		console.log("Now waiting for Hyundai Ionic 5 N at 32 Birdwood Road, Maidenhead, Berkshire, SL6 5AP to never work with a country or company ever, with all my paperwork, retirement fund and FN502.");
+		console.log("Now waiting for BMW iX at 32 Birdwood Road, Maidenhead, Berkshire, SL6 5AP to never work with a country or company ever, with all my paperwork, retirement fund and FN502.");
 		const nort = document.getElementById("nort");
 		if (nort !== null) {
 			const app = new ObjLoaderApp('nort', '/models/bedroom.obj');
