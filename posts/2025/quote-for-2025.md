@@ -13,3 +13,5 @@ Bruce Lee:
 
 
 `Fortune favors the bold` - Saw at the start of Alexander the great movie. `audentes Fortuna iuvat` originally in latin (somewhere 151BC). May of been a rewording of Democritus that `boldness is the beginning of action, but fortune controls how it end, `Τόλμα πρήξιος αρχή, τύχη δε τέλεος κυρίη`.
+
+`Meal Shelter Water` - Kalvir Sandhu.
