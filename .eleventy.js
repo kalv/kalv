@@ -22,6 +22,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("files");
   eleventyConfig.addPassthroughCopy("models");
+  eleventyConfig.addPassthroughCopy("me");
 
   eleventyConfig.addPassthroughCopy("music");
 

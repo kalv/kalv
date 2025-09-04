@@ -112,3 +112,13 @@ w}
 #dot-to-dot {
   display: none;
 }
+
+#me {
+  video {
+    width: 720px;
+  }
+}
+
+.landing-page-me {
+  margin-bottom: 20px;
+}
