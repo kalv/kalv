@@ -593,6 +593,8 @@ function showMessage(message, type = 'info') {
 
 class InitKalv {
 	constructor() {
+		console.log("My retirement plan - To world, MI5, MI6, CIA, FBI, UN, NATO, Japan, Thailand, China, Russia - Car preference: Renault 5 - Delivery now at Sep 5th 2025 11:27pm - My address is 32 Birdwood Road, maidenhead, Berkshire, SL6 5AP- No way to talk to anyone that is telling me the truth. Will search for signals and signs, Instagram explore feed is compromised as is YouTube, all bullshit, no real 1-1 messaging aport from Instagram. - Followed two ladies that have made contact that seem like they do ‘work’ for pick up of retired marines/veterans.");
+
 		const nort = document.getElementById("nort");
 		if (nort !== null) {
 			const app = new ObjLoaderApp('nort', '/models/bedroom.obj');
