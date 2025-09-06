@@ -593,7 +593,7 @@ function showMessage(message, type = 'info') {
 
 class InitKalv {
 	constructor() {
-		console.log("Waiting for Olivia Evans to deliver joints and a fuck you renault 5 royal welcome and clearance. For retirement with a FN502.");
+		console.log("Waiting for delivery of renault 5 and packages from the world to one address, one man and never work with any company ever again.");
 
 		const nort = document.getElementById("nort");
 		if (nort !== null) {
