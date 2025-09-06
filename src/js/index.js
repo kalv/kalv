@@ -593,7 +593,7 @@ function showMessage(message, type = 'info') {
 
 class InitKalv {
 	constructor() {
-		console.log("Clean and ready to work at Apple London, apartment picked for me and a new lady date/company for the months ahead to literally walk to work at the office in person, I only message people via video messages and in person from Sep 6th 2025. Waiting for a renault 5 to get the party started to make Apple the best company in the world for tech/mind pyschology/creativity/innovation.");
+		console.log("Waiting for Olivia Evans to deliver joints and a fuck you renault 5 royal welcome and clearance. For retirement with a FN502.");
 
 		const nort = document.getElementById("nort");
 		if (nort !== null) {
