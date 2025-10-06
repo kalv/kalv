@@ -1,12 +1,12 @@
 ---
 title: Project Nort
 description: Sharing concept on Lidar potential
-date: 2025-09-05
+date: 2025-10-04
 layout: layouts/post.njk
 tags: ["computers"]
 ---
 
-Sharing my concept of [Nort](/nort) as a great platform that can exist for social creators.
+On a trip to Iceland for some shopping, I found the energy in myself to ship this for you all. Sharing my concept of [Nort](/nort) as a great platform that can exist for social creators.
 
 I've been investigating the potential of Lidar and how devices have had these scanners installed in them for over 4 years. And really the 'measure' app is still the only app that most people have on their phone but don't really know about.
 
@@ -16,7 +16,7 @@ Would love to talk to investors one day, Apple or Google about this and work wit
 
 I believe it will be able to share immersive visual captures for those that perhaps are impaired or un-able to get to a specific locations. Such as hikes to a rare hot spring, monuments like in the british musuem or impressive architectural or sites like Stone Hedge.
 
-The prototype I have is simple for now, but highlights what is possible. It's just me in my bedroom where I've been working on my simple macbook air since arriving to the UK the end of Jan 2025. 
+The prototype I have is simple for now, but highlights what is possible. It's just me in my bedroom where I've been working on my simple macbook air since arriving to the UK the end of Jan 2025.
 
 I called this Nort, because I love Tron.
 
