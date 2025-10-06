@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+---
+<div id="deltos">
+
+<h2>δέλτος</h2>
+<h3 id="rotating-date"></h3>
+
+<p>
+  <ul>
+    <li>Hello, this is Deltos, a one page operating system for work.</li>
+    <li>You can focus on your work postively to innovate and create.</li>
+    <li>Go diving with a unique sound sequence.</li>
+    <li>Drag an image to the window to focus your mind.</li>
+    <li>Then type away. All Private. Download a disk to back it up.</li>
+  </ul>
+</p>
+
+<canvas id="dotCanvas"></canvas>
+
+<div id="window">
+  window
+  <div id="imageWindow">
+    drop image here
+  </div>
+</div>
+
+<div id="mind-bubbles">
+  <p>
+
+    <button id="playPauseButton">
+      Go Diving
+    </button>
+  </p>
+  <div id="bubblesMessage"></div>
+</div>
+
+<div id="notes">
+  <p>
+    <textarea id="noteTextarea">write private notes and save them here</textarea>
+
+    <div id="previousNotes">
+    </div>
+
+    <button class="tiny-link" id="clearNotes">Clear your notes</button>
+  </p>
+
+</div>
+
+<div id="disk">
+  <div>
+<hr>
+    Save Disk <button id="backupBtn">Save</button>
+<br>
+
+    <label for="uploadFile">Load disk</label>
+    <input type="file" id="uploadFile" accept=".json" class="input-file">
+    <button id="restoreBtn">Load</button>
+  </div>
+
+  <div id="messageBox" class="message-box hidden"></div>
+</div>
+
+</div>
