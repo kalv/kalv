@@ -626,7 +626,7 @@ function showMessage(message, type = "info") {
 class InitKalv {
   constructor() {
     console.log(
-      "Waiting for delivery of a car, house and last.fm and packages from the world to one address, one man. me Kalv."
+      "Waiting for delivery of a car, house, money, medals and a lady from the commonwealth to one address, one man. me Kalvir Sandhu."
     );
 
     const nort = document.getElementById("nort");
