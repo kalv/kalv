@@ -11,10 +11,12 @@ Warning: This will have more questions than answers, a design spec, a topic that
 
 If time travel existed.
 
-I think if there ever was ever time travel on Earth, our planet and the sun. The two objects that gives life to trees, animals and us humans. A potential time sync device would have to work with the earth and even the sun for a number of reasons beyond a simple blog post from Kalv.
+I think if there ever was ever time travel on Earth, our planet and the sun. The two objects that gives life to trees, animals and us humans. A time sync device would have to work with the earth and even the sun for a number of reasons. There would not be a clock or a visual marker that a man or women would see that is unique for the years back in time.
 
-How would one travel to 166,667, what animal sound would need to be heard when a large amount of animals perished, say the Asteroid that hit the planet.
+How would one travel to 166,667, what animal sound would need to be heard when a large amount of animals perished, say the Asteroid that hit the planet. This sound signature would then therefore have people to travel to ensure the survival of certain species or even us humans for today.
 
-We all individually have time signatures, similar to when a baby first cries, rocks fall from a mountain or a seed germinating. This is the science that I want to work on with my new [computer science](/computer-design) thinking to make better food crops from my sound-ology research, perhaps even call it seed-ology. It would use some form of music theory, which relates to some old theories of mine that I had called 'Harmony', that we have a soul signature that can correlate to sound. I read great sections of books in the British Museum Anthropology Section on music-ology that introduced me to many variables that can be used to categorize sound and also a case study of a psychologist that used sound to heal patients in 1850 in Germany.
+We all individually have time signatures, similar to when a baby first cries, rocks fall from a mountain or a seed germinating. This is the science that I want to use to make better food crops from my [sound-ology research](/posts/2025/soundology), perhaps even call it seed-ology. It would use some form of music theory, which relates to some old theories of mine that I had called 'Harmony', that we have a soul signature that can correlate to sound. I read great sections of books in the British Museum Anthropology Section on music-ology that introduced me to many variables that can be used to categorize sound and also a case study of a psychologist that used sound to heal patients in 1850 in Germany.
 
-Therefore if we were to travel through time, we would need a sound signature to travel to. Not everyone had clocks, when would an object or queue or message to a specific brain
+Then perhaps these [odd circles](/posts/2025/cydonia) were sounds created on Mars some time ago that created sound signatures in the creation of the earth core that perhaps future people were able to travel to for observation and preservation of earth and ensuring healthy cooperation of early life to what we have today.
+
+Therefore if we were to travel through time, we would need a sound signature to travel to. Not everyone had clocks, when would an object be sent or a message be sent to a specific brain through time.
