@@ -643,10 +643,6 @@ class InitKalv {
     if (deltos !== null) {
       console.log("Loading Deltos");
 
-      const canvasElement = document.getElementById("dotCanvas");
-      const dotCanvasApp = new DotCanvas(canvasElement);
-      dotCanvasApp.init();
-
       const notes = document.getElementById("notes");
       if (notes !== null) {
         new Notes();
