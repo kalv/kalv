@@ -20,7 +20,17 @@ eleventyNavigation:
   </ul>
 </p>
 
-<canvas id="dotCanvas"></canvas>
+<div id="info">
+    <p>Status: <span id="statusMessage">Awaiting Location...</span></p>
+    <p>Your Coordinates: <span id="coords">--</span></p>
+    <p>⧋ <span id="sunAlt">--</span></p>
+    <p class="peak">Daily Max Altitude (Noon): <span id="maxAlt">--</span></p>
+    <p class="below">Daily Min Altitude (Midnight): <span id="minAlt">--</span></p>
+</div>
+
+<div id="canvasContainer">
+    <canvas id="sunCanvas" width="400" height="200"></canvas>
+</div>
 
 <div id="window">
   window

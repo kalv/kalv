@@ -122,3 +122,23 @@ w}
 .landing-page-me {
   margin-bottom: 20px;
 }
+#canvasContainer {
+    border: 2px solid #333;
+    background-color: #fff;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+#sunCanvas {
+    display: block; /* Removes any default spacing below the canvas */
+}
+#info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.status {
+    padding: 10px;
+    border-radius: 5px;
+}
+.above { background-color: #e6ffe6; color: #006400; font-weight: bold; }
+.below { background-color: #ffe6e6; color: #8b0000; font-weight: bold; }
+.peak { background-color: #ffffe0; color: #ff8c00; font-weight: bold; }
