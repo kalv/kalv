@@ -944,9 +944,6 @@ fetchLocationAndDraw();
 
 /* Built by Kalvir Sandhu */
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("black-box").style.display = "block";
-  new InitKalv();
-
   // load the site
   fetch("https://kalv-public-api.vercel.app/ping")
     .then((response) => {
