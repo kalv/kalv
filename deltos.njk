@@ -4,6 +4,75 @@ eleventyNavigation:
   key: Deltos
   order: 3
 ---
-<h2>δέλτος</h2>
+<div id="deltos">
 
-<p>No interest from people I shared this with.</p>
+<h2>δέλτος</h2>
+<h3 id="rotating-date"></h3>
+<p>To ensure you're on the right time with your tech setup, use the atomic clock from <a href="https://itime.live">https://itime.live</a></p
+
+<p>
+  <ul>
+    <li>Hello, this is Deltos, a one page operating system for work.</li>
+    <li>You can focus on your work postively to innovate and create.</li>
+    <li>Go diving with a unique sound sequence.</li>
+    <li>Drag an image to the window to focus your mind.</li>
+    <li>Then type away. All Private. Download a disk to back it up.</li>
+  </ul>
+</p>
+
+<div id="info">
+    <p>Status: <span id="statusMessage">Awaiting Location...</span></p>
+    <p>Your Coordinates: <span id="coords">--</span></p>
+    <p>⧋ <span id="sunAlt">--</span></p>
+    <p class="peak">Daily Max Altitude (Noon): <span id="maxAlt">--</span></p>
+    <p class="below">Daily Min Altitude (Midnight): <span id="minAlt">--</span></p>
+</div>
+
+<div id="canvasContainer">
+    <canvas id="sunCanvas" width="400" height="200"></canvas>
+</div>
+
+<div id="window">
+  window
+  <div id="imageWindow">
+    drop image here
+  </div>
+</div>
+
+<div id="mind-bubbles">
+  <p>
+
+    <button id="playPauseButton">
+      Go Diving
+    </button>
+  </p>
+  <div id="bubblesMessage"></div>
+</div>
+
+<div id="notes">
+  <p>
+    <textarea id="noteTextarea">write private notes and save them here</textarea>
+
+    <div id="previousNotes">
+    </div>
+
+    <button class="tiny-link" id="clearNotes">Clear your notes</button>
+  </p>
+
+</div>
+
+<div id="disk">
+  <div>
+<hr>
+    Save Disk <button id="backupBtn">Save</button>
+<br>
+
+    <label for="uploadFile">Load disk</label>
+    <input type="file" id="uploadFile" accept=".json" class="input-file">
+    <button id="restoreBtn">Load</button>
+  </div>
+
+  <div id="messageBox" class="message-box hidden"></div>
+</div>
+
+</div>
