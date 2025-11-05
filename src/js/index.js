@@ -726,221 +726,221 @@ class InitKalv {
 
 /* Sun Time */
 // Configuration
-const CANVAS_WIDTH = 400;
-const PADDING = 20; // Padding inside the canvas for labels and dot visibility
-const PIXELS_PER_DEGREE = 3; // Base scaling factor (pixels per degree)
+// const CANVAS_WIDTH = 400;
+// const PADDING = 20; // Padding inside the canvas for labels and dot visibility
+// const PIXELS_PER_DEGREE = 3; // Base scaling factor (pixels per degree)
 
-function drawSunLine(latitude, longitude) {
-  const now = new Date();
+// function drawSunLine(latitude, longitude) {
+//   const now = new Date();
 
-  // 1. Calculate Sun Times and Altitudes
-  const times = SunCalc.getTimes(now, latitude, longitude);
+//   // 1. Calculate Sun Times and Altitudes
+//   const times = SunCalc.getTimes(now, latitude, longitude);
 
-  if (!times.solarNoon || !times.nadir) {
-    document.getElementById("statusMessage").textContent =
-      "Cannot determine full range (Polar region).";
-    document.getElementById("statusMessage").className = "status below";
-    return;
-  }
+//   if (!times.solarNoon || !times.nadir) {
+//     document.getElementById("statusMessage").textContent =
+//       "Cannot determine full range (Polar region).";
+//     document.getElementById("statusMessage").className = "status below";
+//     return;
+//   }
 
-  const maxPos = SunCalc.getPosition(times.solarNoon, latitude, longitude);
-  const minPos = SunCalc.getPosition(times.nadir, latitude, longitude);
-  const currentPos = SunCalc.getPosition(now, latitude, longitude);
+//   const maxPos = SunCalc.getPosition(times.solarNoon, latitude, longitude);
+//   const minPos = SunCalc.getPosition(times.nadir, latitude, longitude);
+//   const currentPos = SunCalc.getPosition(now, latitude, longitude);
 
-  const maxAltitudeDeg = maxPos.altitude * (180 / Math.PI);
-  const minAltitudeDeg = minPos.altitude * (180 / Math.PI);
-  const currentAltitudeDeg = currentPos.altitude * (180 / Math.PI);
+//   const maxAltitudeDeg = maxPos.altitude * (180 / Math.PI);
+//   const minAltitudeDeg = minPos.altitude * (180 / Math.PI);
+//   const currentAltitudeDeg = currentPos.altitude * (180 / Math.PI);
 
-  // --- Update Info Display ---
-  document.getElementById("coords").textContent = `${latitude.toFixed(
-    4
-  )}°, ${longitude.toFixed(4)}°`;
-  document.getElementById("sunAlt").textContent = `${currentAltitudeDeg.toFixed(
-    2
-  )}°`;
-  document.getElementById("maxAlt").textContent = `${maxAltitudeDeg.toFixed(
-    2
-  )}°`;
-  document.getElementById("minAlt").textContent = `${minAltitudeDeg.toFixed(
-    2
-  )}°`;
+//   // --- Update Info Display ---
+//   document.getElementById("coords").textContent = `${latitude.toFixed(
+//     4
+//   )}°, ${longitude.toFixed(4)}°`;
+//   document.getElementById("sunAlt").textContent = `${currentAltitudeDeg.toFixed(
+//     2
+//   )}°`;
+//   document.getElementById("maxAlt").textContent = `${maxAltitudeDeg.toFixed(
+//     2
+//   )}°`;
+//   document.getElementById("minAlt").textContent = `${minAltitudeDeg.toFixed(
+//     2
+//   )}°`;
 
-  const statusMsg = document.getElementById("statusMessage");
-  statusMsg.classList.remove("above", "below");
+//   const statusMsg = document.getElementById("statusMessage");
+//   statusMsg.classList.remove("above", "below");
 
-  if (currentAltitudeDeg > 0) {
-    statusMsg.textContent = "The sun is above the horizon (Daytime).";
-    statusMsg.classList.add("above");
-  } else {
-    statusMsg.textContent = "The sun is below the horizon (Night/Twilight).";
-    statusMsg.classList.add("below");
-  }
+//   if (currentAltitudeDeg > 0) {
+//     statusMsg.textContent = "The sun is above the horizon (Daytime).";
+//     statusMsg.classList.add("above");
+//   } else {
+//     statusMsg.textContent = "The sun is below the horizon (Night/Twilight).";
+//     statusMsg.classList.add("below");
+//   }
 
-  // --- Dynamic Canvas Height and Horizon Calculation ---
+//   // --- Dynamic Canvas Height and Horizon Calculation ---
 
-  const rangeAboveZero = Math.max(0, maxAltitudeDeg);
-  const rangeBelowZero = Math.abs(Math.min(0, minAltitudeDeg));
+//   const rangeAboveZero = Math.max(0, maxAltitudeDeg);
+//   const rangeBelowZero = Math.abs(Math.min(0, minAltitudeDeg));
 
-  // Calculate height based on how many pixels per degree we want
-  const heightAboveHorizon = rangeAboveZero * PIXELS_PER_DEGREE;
-  const heightBelowHorizon = rangeBelowZero * PIXELS_PER_DEGREE;
+//   // Calculate height based on how many pixels per degree we want
+//   const heightAboveHorizon = rangeAboveZero * PIXELS_PER_DEGREE;
+//   const heightBelowHorizon = rangeBelowZero * PIXELS_PER_DEGREE;
 
-  // Total canvas height must accommodate the max-to-min range + padding
-  const CANVAS_HEIGHT = heightAboveHorizon + heightBelowHorizon + 2 * PADDING;
+//   // Total canvas height must accommodate the max-to-min range + padding
+//   const CANVAS_HEIGHT = heightAboveHorizon + heightBelowHorizon + 2 * PADDING;
 
-  const canvas = document.getElementById("sunCanvas");
-  const ctx = canvas.getContext("2d");
+//   const canvas = document.getElementById("sunCanvas");
+//   const ctx = canvas.getContext("2d");
 
-  // Dynamically set canvas height
-  canvas.height = CANVAS_HEIGHT;
+//   // Dynamically set canvas height
+//   canvas.height = CANVAS_HEIGHT;
 
-  // The Y position of the Horizon (0 degrees) is simply PADDING + the calculated height above zero
-  // Since Y increases downward, a positive altitude draws towards the top (low Y values).
-  const horizonY = PADDING + heightAboveHorizon;
-  const centerX = CANVAS_WIDTH / 2;
+//   // The Y position of the Horizon (0 degrees) is simply PADDING + the calculated height above zero
+//   // Since Y increases downward, a positive altitude draws towards the top (low Y values).
+//   const horizonY = PADDING + heightAboveHorizon;
+//   const centerX = CANVAS_WIDTH / 2;
 
-  // Clear the canvas
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+//   // Clear the canvas
+//   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-  // 1. Draw Horizon Line (0 degrees) - This is the line drawn "from the middle"
-  ctx.beginPath();
-  ctx.strokeStyle = "#00008B"; // Dark Blue for Horizon
-  ctx.lineWidth = 2;
-  ctx.moveTo(0, horizonY);
-  ctx.lineTo(CANVAS_WIDTH, horizonY);
-  ctx.stroke();
+//   // 1. Draw Horizon Line (0 degrees) - This is the line drawn "from the middle"
+//   ctx.beginPath();
+//   ctx.strokeStyle = "#00008B"; // Dark Blue for Horizon
+//   ctx.lineWidth = 2;
+//   ctx.moveTo(0, horizonY);
+//   ctx.lineTo(CANVAS_WIDTH, horizonY);
+//   ctx.stroke();
 
-  // 2. Draw Daily Min and Max Altitude Markers
+//   // 2. Draw Daily Min and Max Altitude Markers
 
-  const maxY = PADDING; // Max altitude is at the top (low Y)
-  const minY = CANVAS_HEIGHT - PADDING; // Min altitude is at the bottom (high Y)
+//   const maxY = PADDING; // Max altitude is at the top (low Y)
+//   const minY = CANVAS_HEIGHT - PADDING; // Min altitude is at the bottom (high Y)
 
-  // Draw and Label Max Alt (Top)
-  ctx.beginPath();
-  ctx.strokeStyle = "#FFD700";
-  ctx.setLineDash([5, 5]);
-  ctx.moveTo(centerX - 10, maxY);
-  ctx.lineTo(centerX + 10, maxY);
-  ctx.stroke();
-  ctx.setLineDash([]);
+//   // Draw and Label Max Alt (Top)
+//   ctx.beginPath();
+//   ctx.strokeStyle = "#FFD700";
+//   ctx.setLineDash([5, 5]);
+//   ctx.moveTo(centerX - 10, maxY);
+//   ctx.lineTo(centerX + 10, maxY);
+//   ctx.stroke();
+//   ctx.setLineDash([]);
 
-  ctx.font = "14px Arial";
-  ctx.fillStyle = "#ff8c00";
-  ctx.textAlign = "left";
-  ctx.fillText(`Max: ${maxAltitudeDeg.toFixed(1)}°`, PADDING, maxY + 15);
+//   ctx.font = "14px Arial";
+//   ctx.fillStyle = "#ff8c00";
+//   ctx.textAlign = "left";
+//   ctx.fillText(`Max: ${maxAltitudeDeg.toFixed(1)}°`, PADDING, maxY + 15);
 
-  // Draw and Label Min Alt (Bottom)
-  ctx.beginPath();
-  ctx.strokeStyle = "#4682B4";
-  ctx.setLineDash([5, 5]);
-  ctx.moveTo(centerX - 10, minY);
-  ctx.lineTo(centerX + 10, minY);
-  ctx.stroke();
-  ctx.setLineDash([]);
+//   // Draw and Label Min Alt (Bottom)
+//   ctx.beginPath();
+//   ctx.strokeStyle = "#4682B4";
+//   ctx.setLineDash([5, 5]);
+//   ctx.moveTo(centerX - 10, minY);
+//   ctx.lineTo(centerX + 10, minY);
+//   ctx.stroke();
+//   ctx.setLineDash([]);
 
-  ctx.fillStyle = "#8b0000";
-  ctx.fillText(`Min: ${minAltitudeDeg.toFixed(1)}°`, PADDING, minY - 5);
+//   ctx.fillStyle = "#8b0000";
+//   ctx.fillText(`Min: ${minAltitudeDeg.toFixed(1)}°`, PADDING, minY - 5);
 
-  // 3. Draw Current Sun Dot and Altitude Line
+//   // 3. Draw Current Sun Dot and Altitude Line
 
-  // Current Y position: distance from the horizon
-  // Vertical Shift = Current Altitude * PIXELS_PER_DEGREE
-  const verticalShift = currentAltitudeDeg * PIXELS_PER_DEGREE;
+//   // Current Y position: distance from the horizon
+//   // Vertical Shift = Current Altitude * PIXELS_PER_DEGREE
+//   const verticalShift = currentAltitudeDeg * PIXELS_PER_DEGREE;
 
-  // Current Y = Horizon Y - Vertical Shift (subtract because Y-axis is inverted)
-  const currentY = horizonY - verticalShift;
+//   // Current Y = Horizon Y - Vertical Shift (subtract because Y-axis is inverted)
+//   const currentY = horizonY - verticalShift;
 
-  // Draw the altitude line (Vertical)
-  ctx.beginPath();
-  ctx.strokeStyle = currentAltitudeDeg > 0 ? "#FFA500" : "#4682B4";
-  ctx.lineWidth = 3;
-  ctx.moveTo(centerX, horizonY); // Start at the horizon (0°)
-  ctx.lineTo(centerX, currentY); // End at the current scaled position
-  ctx.stroke();
+//   // Draw the altitude line (Vertical)
+//   ctx.beginPath();
+//   ctx.strokeStyle = currentAltitudeDeg > 0 ? "#FFA500" : "#4682B4";
+//   ctx.lineWidth = 3;
+//   ctx.moveTo(centerX, horizonY); // Start at the horizon (0°)
+//   ctx.lineTo(centerX, currentY); // End at the current scaled position
+//   ctx.stroke();
 
-  // Draw a circle at the current sun's scaled position
-  ctx.beginPath();
-  ctx.arc(centerX, currentY, 8, 0, 2 * Math.PI);
-  ctx.fillStyle = currentAltitudeDeg > 0 ? "#FFA500" : "#4682B4";
-  ctx.fill();
+//   // Draw a circle at the current sun's scaled position
+//   ctx.beginPath();
+//   ctx.arc(centerX, currentY, 8, 0, 2 * Math.PI);
+//   ctx.fillStyle = currentAltitudeDeg > 0 ? "#FFA500" : "#4682B4";
+//   ctx.fill();
 
-  // 4. Draw Current Altitude Text next to the dot
-  ctx.font = "14px Arial";
-  ctx.fillStyle = "#333";
-  const textY = currentY < horizonY ? currentY - 10 : currentY + 20;
-  ctx.fillText(`${currentAltitudeDeg.toFixed(2)}°`, centerX + 15, textY);
-}
+//   // 4. Draw Current Altitude Text next to the dot
+//   ctx.font = "14px Arial";
+//   ctx.fillStyle = "#333";
+//   const textY = currentY < horizonY ? currentY - 10 : currentY + 20;
+//   ctx.fillText(`${currentAltitudeDeg.toFixed(2)}°`, centerX + 15, textY);
+// }
 
-// --- Geolocation Logic (Remains the same) ---
-// Set the desired update interval in milliseconds (5 seconds = 5000ms)
-const UPDATE_INTERVAL = 5000;
-let currentLocation = null; // Variable to store the coordinates once found
+// // --- Geolocation Logic (Remains the same) ---
+// // Set the desired update interval in milliseconds (5 seconds = 5000ms)
+// const UPDATE_INTERVAL = 5000;
+// let currentLocation = null; // Variable to store the coordinates once found
 
-// Function to handle successful geolocation
-function success(pos) {
-  // Only store location if it's the first time, or if accuracy improves significantly (optional)
-  if (!currentLocation) {
-    currentLocation = pos.coords;
-    document.getElementById("statusMessage").textContent =
-      "Location found. Initializing visualization...";
+// // Function to handle successful geolocation
+// function success(pos) {
+//   // Only store location if it's the first time, or if accuracy improves significantly (optional)
+//   if (!currentLocation) {
+//     currentLocation = pos.coords;
+//     document.getElementById("statusMessage").textContent =
+//       "Location found. Initializing visualization...";
 
-    // Start the repeating update process once location is secure
-    startUpdateLoop();
-  }
-}
+//     // Start the repeating update process once location is secure
+//     startUpdateLoop();
+//   }
+// }
 
-// Function to handle geolocation errors
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-  document.getElementById(
-    "statusMessage"
-  ).innerHTML = `**Error:** Could not get location. <br>(${err.message}).<br>Try checking browser settings.`;
-  document.getElementById("statusMessage").className = "status below";
-}
+// // Function to handle geolocation errors
+// function error(err) {
+//   console.warn(`ERROR(${err.code}): ${err.message}`);
+//   document.getElementById(
+//     "statusMessage"
+//   ).innerHTML = `**Error:** Could not get location. <br>(${err.message}).<br>Try checking browser settings.`;
+//   document.getElementById("statusMessage").className = "status below";
+// }
 
-// 1. Core function to retrieve location and draw
-function fetchLocationAndDraw() {
-  // If location is not yet known, try to get it
-  if (!currentLocation) {
-    const options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0,
-    };
+// // 1. Core function to retrieve location and draw
+// function fetchLocationAndDraw() {
+//   // If location is not yet known, try to get it
+//   if (!currentLocation) {
+//     const options = {
+//       enableHighAccuracy: true,
+//       timeout: 5000,
+//       maximumAge: 0,
+//     };
 
-    if (navigator.geolocation) {
-      // This is a non-blocking request and will call 'success' when done.
-      navigator.geolocation.getCurrentPosition(success, error, options);
-    } else {
-      document.getElementById("statusMessage").innerHTML =
-        "Geolocation is not supported by this browser.";
-      document.getElementById("statusMessage").className = "status below";
-    }
-  } else {
-    // If location is known, simply redraw the canvas with the current time
-    // NOTE: The drawSunLine() function (from the previous step) must be defined
-    // and accept latitude and longitude as arguments.
-    drawSunLine(currentLocation.latitude, currentLocation.longitude);
-    document.getElementById("statusMessage").textContent =
-      "Visualization updated automatically.";
-  }
-}
+//     if (navigator.geolocation) {
+//       // This is a non-blocking request and will call 'success' when done.
+//       navigator.geolocation.getCurrentPosition(success, error, options);
+//     } else {
+//       document.getElementById("statusMessage").innerHTML =
+//         "Geolocation is not supported by this browser.";
+//       document.getElementById("statusMessage").className = "status below";
+//     }
+//   } else {
+//     // If location is known, simply redraw the canvas with the current time
+//     // NOTE: The drawSunLine() function (from the previous step) must be defined
+//     // and accept latitude and longitude as arguments.
+//     drawSunLine(currentLocation.latitude, currentLocation.longitude);
+//     document.getElementById("statusMessage").textContent =
+//       "Visualization updated automatically.";
+//   }
+// }
 
-// 2. Function to start the repeating loop
-function startUpdateLoop() {
-  // Call the function immediately upon starting
-  fetchLocationAndDraw();
+// // 2. Function to start the repeating loop
+// function startUpdateLoop() {
+//   // Call the function immediately upon starting
+//   fetchLocationAndDraw();
 
-  // Set up the interval timer to repeat the function every 5 seconds
-  setInterval(fetchLocationAndDraw, UPDATE_INTERVAL);
+//   // Set up the interval timer to repeat the function every 5 seconds
+//   setInterval(fetchLocationAndDraw, UPDATE_INTERVAL);
 
-  // We only need to call fetchLocationAndDraw here. The first successful
-  // run will populate 'currentLocation' and the subsequent calls will
-  // skip the heavy geolocation step and go straight to drawing.
-}
+//   // We only need to call fetchLocationAndDraw here. The first successful
+//   // run will populate 'currentLocation' and the subsequent calls will
+//   // skip the heavy geolocation step and go straight to drawing.
+// }
 
-// 3. Kick off the whole process by trying to get the location.
-fetchLocationAndDraw();
+// // 3. Kick off the whole process by trying to get the location.
+// fetchLocationAndDraw();
 
 /* Built by Kalvir Sandhu */
 document.addEventListener("DOMContentLoaded", () => {
