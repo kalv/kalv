@@ -732,13 +732,6 @@ function drawSunLine(latitude, longitude) {
   // 1. Calculate Sun Times and Altitudes
   const times = SunCalc.getTimes(now, latitude, longitude);
 
-  if (!times.solarNoon || !times.nadir) {
-    document.getElementById("statusMessage").textContent =
-      "Cannot determine full range (Polar region).";
-    document.getElementById("statusMessage").className = "status below";
-    return;
-  }
-
   const maxPos = SunCalc.getPosition(times.solarNoon, latitude, longitude);
   const minPos = SunCalc.getPosition(times.nadir, latitude, longitude);
   const currentPos = SunCalc.getPosition(now, latitude, longitude);
@@ -760,17 +753,6 @@ function drawSunLine(latitude, longitude) {
   document.getElementById("minAlt").textContent = `${minAltitudeDeg.toFixed(
     2
   )}°`;
-
-  const statusMsg = document.getElementById("statusMessage");
-  statusMsg.classList.remove("above", "below");
-
-  if (currentAltitudeDeg > 0) {
-    statusMsg.textContent = "The sun is above the horizon (Daytime).";
-    statusMsg.classList.add("above");
-  } else {
-    statusMsg.textContent = "The sun is below the horizon (Night/Twilight).";
-    statusMsg.classList.add("below");
-  }
 
   // --- Dynamic Canvas Height and Horizon Calculation ---
 
@@ -877,8 +859,6 @@ function success(pos) {
   // Only store location if it's the first time, or if accuracy improves significantly (optional)
   if (!currentLocation) {
     currentLocation = pos.coords;
-    document.getElementById("statusMessage").textContent =
-      "Location found. Initializing visualization...";
 
     // Start the repeating update process once location is secure
     startUpdateLoop();
@@ -888,10 +868,6 @@ function success(pos) {
 // Function to handle geolocation errors
 function error(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
-  document.getElementById(
-    "statusMessage"
-  ).innerHTML = `**Error:** Could not get location. <br>(${err.message}).<br>Try checking browser settings.`;
-  document.getElementById("statusMessage").className = "status below";
 }
 
 // 1. Core function to retrieve location and draw
@@ -908,17 +884,13 @@ function fetchLocationAndDraw() {
       // This is a non-blocking request and will call 'success' when done.
       navigator.geolocation.getCurrentPosition(success, error, options);
     } else {
-      document.getElementById("statusMessage").innerHTML =
-        "Geolocation is not supported by this browser.";
-      document.getElementById("statusMessage").className = "status below";
+      console.error("Geolocation is not supported by this browser.");
     }
   } else {
     // If location is known, simply redraw the canvas with the current time
     // NOTE: The drawSunLine() function (from the previous step) must be defined
     // and accept latitude and longitude as arguments.
     drawSunLine(currentLocation.latitude, currentLocation.longitude);
-    document.getElementById("statusMessage").textContent =
-      "Visualization updated automatically.";
   }
 }
 
