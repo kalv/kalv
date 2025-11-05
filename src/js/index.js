@@ -6,7 +6,6 @@ import Notes from "./notes.js";
 import Bubbles from "./bubbles.js";
 import DroppableImageTarget from "./DroppableImageTarget.js";
 import IndexedDBBackupRestore from "./IndexedDBBackupRestore.js";
-import RotatingDate from "./RotatingDate.js";
 import * as SunCalc from "suncalc";
 
 let scene = undefined;
@@ -651,9 +650,6 @@ class InitKalv {
       new Bubbles("playPauseButton", "bubblesMessage", "playIcon", "pauseIcon");
 
       new DroppableImageTarget("imageWindow");
-
-      const myDateRotator = new RotatingDate(new Date());
-      myDateRotator.startRotation();
 
       const backupRestore = new IndexedDBBackupRestore(DB_NAMES);
       document
