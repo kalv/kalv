@@ -19,3 +19,5 @@ Daybreakers - A vampire movie that will truly make you think about what a world 
 The day the earth stood still, the one with Keanu Reeves. Literally the world is all evil and react very un-kindly to first contact and then pays the price.
 
 1977, Close Encounters of the Third Kind. Just watch it.
+
+2012 Iron Sky. What people would call a B class movie, about an alternate view on Hitler and the future and the moon ⦶
