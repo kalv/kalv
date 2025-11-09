@@ -624,8 +624,6 @@ function showMessage(message, type = "info") {
 
 class InitKalv {
   constructor() {
-    console.log("Waiting for 'all the things'.");
-
     const nort = document.getElementById("nort");
     if (nort !== null) {
       const app = new ObjLoaderApp("nort", "/models/bedroom.obj");
