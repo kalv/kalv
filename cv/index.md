@@ -166,7 +166,6 @@ During pandemic, introduced correct practises for developers to work remotely en
 
 ## 2022 - 2025
 Travelling, researching computer science and future innovations for self.
-Designing new software [Nort](/nort) for better capturing of natural landscapes around the world. For spatial visual experiences. To build on any platform that eventually employs and respects me.
 
 # Talks
 1997 - Future of Digital Britain organized by Tomorrows World.
