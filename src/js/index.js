@@ -6,6 +6,7 @@ import Notes from "./notes.js";
 import Bubbles from "./bubbles.js";
 import DroppableImageTarget from "./DroppableImageTarget.js";
 import IndexedDBBackupRestore from "./IndexedDBBackupRestore.js";
+import SnowflakeRenderer from "./SnowflakeRenderer.js";
 import * as SunCalc from "suncalc";
 
 let scene = undefined;
@@ -625,8 +626,11 @@ function showMessage(message, type = "info") {
 class InitKalv {
   constructor() {
     console.log(
-      "Waiting for delivery of a car, house, money, medals and a lady from the commonwealth to one address, one man. me Kalvir Sandhu."
+      "Waiting for delivery of a car from the commonwealth to one address, one man. me Kalvir Sandhu."
     );
+
+    const snowflakeAnimation = new SnowflakeRenderer(100, "#e0f2ff");
+    snowflakeAnimation.start();
 
     const nort = document.getElementById("nort");
     if (nort !== null) {
