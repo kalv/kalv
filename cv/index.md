@@ -165,7 +165,7 @@ Overhauled all software developer role promotion and growth job matrices.
 During pandemic, introduced correct practises for developers to work remotely ensuring they were happy and content working with one another with only Slack and Google Hangouts.
 
 ## 2022 - 2025
-Travelling, researching computer science and future innovations for self.
+Traveling, researching computer science and future innovations for self.
 Designing new software [Nort](/nort) for better capturing of natural landscapes around the world in the hope to land a job at Apple Battersea London.
 Working on new ways to capture and create content of the mind with a new sun/mind clock Deltos working environment to assist new computer science working operating systems of today. To battle inflicting thoughts and creating focus on the work a good man can do. [Deltos](/deltos)
 
