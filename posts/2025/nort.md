@@ -1,7 +1,7 @@
 ---
 title: Project Nort
 description: Sharing concept on Lidar potential
-date: 2025-10-04
+date: 2025-12-04
 layout: layouts/post.njk
 tags: ["computers"]
 ---
