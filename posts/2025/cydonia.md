@@ -1,7 +1,7 @@
 ---
 title: Mars Discovery making me think about Life
 description: Mars Discovery making me think about Life for Lisa
-date: 2025-12-04
+date: 2025-12-06
 layout: layouts/post.njk
 tags: ["theories"]
 ---
