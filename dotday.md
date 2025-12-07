@@ -73,6 +73,8 @@ Stupid world thinking they are time travellers with voices in their head using N
 15:14 Drinking Tea
 15:35 Picked Emma Stone on Instagram as pickup lady for Apple Job offer to work at Battersea and help me setup at Whistler Square property in London. Know it won’t arrive nor a message will arrive in my instagram after I messaged Taylor Swift secretly with code words about how voices from Apple computers and Mac OS are coming out like when looking in the mirror, from witches that happen to be royal.
 15:51 Don’t know what this Olivia Evans looks like, is she a cat? Should I look on the street.
+15:55 Picked a spaceship for Fake William, ∆ (which is a toy in my bedroom). Picked an Audi for fake OO OO Harry to arrive in my bedroom in 10minutes.
+16:05 Future prediction - NOTHING.
 
 … Whatever amount of time you world want to insert and me writing stupid promises …
 
