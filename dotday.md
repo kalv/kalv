@@ -64,6 +64,10 @@ Dec 7th 2025
 11:56 No Hyndia 5N, No Country in the world job offer for any company, including Iceland
 12:16 Say stupid to 009, Kalvir Sandhu back through the digital messaging for verification of delivery items to the royal security team, GCHQ, MI6, MI7. Mind agents. Bill and Ted didn’t arrive. No Bill and Ted.
 
+Stupid world thinking they are time travellers with voices in their head using Nazi tech. Witchcraft.
+12:10 Nothing delivered
+12:40 Nothing delivered
+13:10 Nothing Delivered
 
 … Whatever amount of time you world want to insert and me writing stupid promises …
 
