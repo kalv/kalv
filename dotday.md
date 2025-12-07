@@ -71,6 +71,7 @@ Stupid world thinking they are time travellers with voices in their head using N
 14:09 No lunch delivered to a marine/cybersec/asset in computer science/science
 15:13 Nothing delivered. Washing clothes and in the dryer. Ate 2 booster bars.
 15:14 Drinking Tea
+15:35 Picked Emma Stone on Instagram as pickup lady for Apple Job offer to work at Battersea and help me setup at Whistler Square property in London. Know it won’t arrive nor a message will arrive in my instagram after I messaged Taylor Swift secretly with code words about how voices from Apple computers and Mac OS are coming out like when looking in the mirror, from witches that happen to be royal.
 
 … Whatever amount of time you world want to insert and me writing stupid promises …
 
